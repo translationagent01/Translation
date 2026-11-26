@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPC Translation Desk</title>
+<script>try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<span class="brand">EPC Translation Desk</span>
+<button class="theme" id="theme" type="button" aria-label="Switch between dark and light theme"><span id="themeLabel">Dark</span></button>
+</div>
+</header>
+
+<main class="wrap">
+<section id="translation" class="panel">
+<div class="intro"><h1>Translation</h1><p>Technical documents, emails and screenshots in English, French, Arabic and Korean.</p></div>
+<div class="chat" data-welcome="Welcome. Choose a task above, then attach a file or paste your text.&#10;&#10;I translate English–French and English–Arabic in both directions.">
+<div class="tasks" role="group" aria-label="Task"></div>
+<div class="sub"><p class="hint"></p><label class="langwrap">Output language <select class="lang" aria-label="Output language"></select></label></div>
+<div class="log" aria-live="polite"></div>
+<div class="file" hidden></div>
+<div class="compose"><input type="file" hidden><button class="btn ghost attach" type="button">Attach file</button><textarea dir="auto" rows="2" aria-label="Your content"></textarea><button class="btn primary send" type="button">Send</button></div>
+<div class="foot"><span>Enter to send · Shift+Enter for a new line · Ctrl+V to paste a screenshot · one file per message</span><button class="linkbtn newc" type="button">New conversation</button></div>
+</div>
+</section>
+
+</main>
+<footer><div class="wrap">Review translations of contractual and safety documents before issuing them.</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
